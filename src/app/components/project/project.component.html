@@ -1,0 +1,25 @@
+<div class="projectWrapper">
+  <div class="project">
+    <h3>{{project?.title}}</h3>
+    <div class="flex justify-between items-center">
+      <div class="projectInfo">
+        <div>
+          <ul>{{project?.description}}
+            <li *ngFor="let i of project?.descriptionList">{{i}}</li>
+          </ul>
+          <ul>Stack of technologies:
+            <li *ngFor="let i of project?.technology">{{i}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flexCol">
+        <img class="mb-4" src={{imgUrl}} alt="React_sneakers">
+        <a href={{project?.ghPages}} target="_blank"
+          class="rounded-full pr-10 pl-10 p-2">GHPages</a>
+      </div>
+    </div>
+  </div>
+<!--   <img *ngIf="id === 0" src="assets/projects_figure_1.png" alt="Proj_figure_1" class="projFigureOne">
+  <img *ngIf="id === 1" src="assets/projects_figure_2.png" alt="Proj_figure_2" class="projFigureTwo">
+  <img *ngIf="id === 2" src="assets/projects_figure_1.png" alt="Proj_figure_1" class="projFigureOne"> -->
+</div>

@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="firstBlock bg-black h-screen w-full flex items-center justify-center">
+    <div class="m-auto">
+      <h1 class="relative right-32">Wellcome to</h1>
+      <h1 class="relative left-32">my projects</h1>
+      <img src="assets/projects_figure_1.svg" alt="Projects_figure" class="contactsFigure">
+    </div>
+  </div>
+  <app-project *ngFor="let project of projects; index as id" [project]="project" [id]="id"></app-project>
+</div>
+<app-contacts></app-contacts>

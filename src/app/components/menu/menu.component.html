@@ -1,0 +1,21 @@
+<div class="absolute left-0 top-0 p-10 w-full max-w-full h-max flex items-center justify-between">
+  <div class="flex z-10">
+    <button class="menu" (click)="$event.stopPropagation(); menuView()">
+      <svg width="55" height="34" viewBox="0 0 55 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="13" width="55" height="8" rx="4" fill="white" />
+        <rect y="26" width="55" height="8" rx="4" fill="white" />
+        <rect width="55" height="8" rx="4" fill="white" />
+      </svg>
+    </button>
+    <div class="sliderMenu" *ngIf="showMenu" [@openClose]>
+      <a [routerLink]="''" class="menuLinkBtn">Main page</a>
+      <a [routerLink]="'/projects'" class="menuLinkBtn">Projects page</a>
+    </div>
+  </div>
+
+  <div class="flex-col hidden">
+    <button>Theme</button>
+    <p class="none"></p>
+    <button>Eng</button>
+  </div>
+</div>

@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'resume';
+  showMenu = false;
+
+  changeMenuView() {
+    this.showMenu = !this.showMenu;
+  }
+
+  closeMenu() {
+    this.showMenu = false;
+  }
 }
