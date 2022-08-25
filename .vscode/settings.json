@@ -1,5 +1,6 @@
 {
   "emmet.includeLanguages": {
     "postcss": "css"
-  }
+  },
+  "liveServer.settings.port": 5501
 }
