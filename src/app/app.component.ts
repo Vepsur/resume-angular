@@ -16,4 +16,12 @@ export class AppComponent {
   closeMenu() {
     this.showMenu = false;
   }
+
+  onActivate() {
+    window.scroll({ 
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+     });
+ }
 }

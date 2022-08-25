@@ -1,4 +1,4 @@
 <div class="wrapper black" (click)="closeMenu()">
   <app-menu [showMenu]="showMenu" (changeMenuView)="changeMenuView()"></app-menu>
-  <router-outlet></router-outlet>
+  <router-outlet (activate)="onActivate()"></router-outlet>
 </div>
