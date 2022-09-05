@@ -1,69 +1,76 @@
+.aboutBlock {
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/profile_photo_figure.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 20;
+}
+
 .photoFigure {
-  position: relative;
+  position: absolute;
   left: 0;
   top: -15vh;
-  width: 50vw;
+  width: 55vw;
   z-index: 1;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1600px) {
+    left: -10%;
     width: 60vw;
   }
 
-  @media (max-width: 900px) {
-    top: -25vh;
-    left: -30vw;
-    width: 90vw;
+  @media (max-width: 1500px) {
+    width: 65vw;
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 1300px) {
+    left: -15%;
+    width: 75vw;
+  }
+
+  @media (max-width: 1100px) {
+    top: -25%;
+    left: -35%;
+    width: 95vw;
+  }
+
+  @media (max-aspect-ratio: 10/12) {
     top: -45vh;
-    left: initial;
-    right: 10vw;
-    width: 300%;
-  }
-
-  @media (max-width: 710px) {
-    right: 15vw;
-  }
-
-  @media (max-width: 670px) {
-    right: 23vw;
+    width: calc(100vh);
   }
 }
 
 .profilePhoto {
-  position: absolute;
-  top: 35%;
-  left: 36%;
-  width: 23vw;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
 
-  @media (max-width: 1100px) {
-    width: 28vw;
-  }
+  img {
+    position: relative;
+    height: 23vw;
+    width: 23vw;
+    left: 14%;
 
-  @media (max-width: 900px) {
-    top: 35%;
-    left: 36%;
-    width: 40vw;
-  }
+    @media (max-width: 1300px) {
+      height: 30vw;
+      width: 30vw;
+    }
 
-  @media (max-width: 750px) {
-    top: 30%;
-    left: 5%;
-    width: 40vw;
+    @media (max-width: 1200px) {
+      height: 35vw;
+      width: 35vw;
+    }
   }
 }
 
 .firstBlock {
-  margin: 0 auto;
-
   h1 {
     font-size: 6vw;
   }
 }
 
 .profileText {
-  position: absolute;
+  position: relative;
   right: 0;
   top: 0;
   display: flex;
@@ -73,7 +80,6 @@
   height: 100%;
   text-align: center;
   z-index: 5;
-  font-size: 1.5vw;
 
   ul {
     margin-bottom: 1rem;
@@ -89,16 +95,9 @@
     text-align: left;
     text-indent: 2rem;
     margin-bottom: 1rem;
-
-    @media (max-width: 900px) {
-      font-size: 2vw;
-    }
-
   }
 
-  @media (max-width: 1300px) {
-    justify-content: start;
-  }
+  @media (max-width: 1300px) {}
 
   @media (max-width: 1200px) {
     padding: 20px;
@@ -147,17 +146,10 @@
 }
 
 .adaptiveHeight {
+  min-height: 600px;
   height: 100vh;
 
-  @media (max-width: 1100px) {
-    height: 105vh;
-  }
-
-  @media (max-width: 900px) {
-    height: 110vh;
-  }
-
-  @media (max-width: 750px) {
-    height: 120vh;
+  @media (max-aspect-ratio: 1/1) {
+    height: calc(70vh);
   }
 }
